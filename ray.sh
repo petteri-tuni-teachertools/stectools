@@ -25,11 +25,12 @@ RESULT="$RESULT - $SALDO"
 
 # Final conclusion
 RESULT="$RESULT #"
-echo $RESULT
 
 if [ $SALDO -eq $TARGET ]; then
+  echo "SUCCESS($RESULT)"
   exit 0
 else
+  echo "FAILED($RESULT)"
   exit $SALDO
 fi
 
